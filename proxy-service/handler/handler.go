@@ -7,4 +7,5 @@ import (
 
 func ProxyHandler(w http.ResponseWriter, r *http.Request) {
 	log.Println("Hello, World!")
+	log.Println("Hello, World!")
 }
