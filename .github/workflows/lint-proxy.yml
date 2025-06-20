@@ -22,7 +22,7 @@ jobs:
       - name: Install dependencies
         run: go get ./proxy-service
       - name: Build
-        run: go build -v ./proxy-service/
+        run: go build -v ./proxy-service/main.go
 
   lint:
     name: Lint proxy service
