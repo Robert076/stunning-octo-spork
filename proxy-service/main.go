@@ -11,6 +11,6 @@ func main() {
 	http.HandleFunc("/proxy", handler.ProxyHandler)
 
 	if err := http.ListenAndServe(":8080", nil); err != nil {
-		fmt.Println("Nooooo")
+		fmt.Println("Error setting up http server")
 	}
 }
