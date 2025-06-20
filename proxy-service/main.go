@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"net/http"
 
 	"github.com/robert076/stunning-octo-spork/proxy-service/handler"
@@ -9,5 +10,7 @@ import (
 func main() {
 	http.HandleFunc("/proxy", handler.ProxyHandler)
 
-	http.ListenAndServe(":8080", nil)
+	if err := http.ListenAndServe(":8080", nil); err != nil {
+		fmt.Println("Nooooo")
+	}
 }

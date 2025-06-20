@@ -20,12 +20,12 @@ jobs:
         with:
           go-version: "1.23"
       - name: Install dependencies
-        run: go get .
+        run: go get ./proxy-service
       - name: Build
-        run: go build -v ./cmd/auth-service
+        run: go build -v ./proxy-service/
 
   lint:
-    name: Lint
+    name: Lint proxy service
     runs-on: ubuntu-latest
     if: github.event_name == 'pull_request'
     timeout-minutes: 3
