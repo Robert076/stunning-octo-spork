@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: proxy-container
-          image: robert076/octo-proxy:beta
+          image: robert076/octo-proxy:theta
           ports:
             - containerPort: 8080
           env:

@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: internal-deployment
+  namespace: proxy-ns
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: octo-internal
+  template:
+    metadata:
+      labels:
+        app: octo-internal
+    spec:
+      containers:
+        - name: internal-container
+          image: robert076/octo-internal:alpha
+          ports:
+            - containerPort: 5433
