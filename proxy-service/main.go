@@ -16,6 +16,8 @@ func main() {
 		return
 	}
 
+	log.Printf("Got env var: %s", internalServiceHost)
+
 	http.HandleFunc("/proxy", handler.ProxyHandler)
 
 	if err := http.ListenAndServe(":8080", nil); err != nil {
