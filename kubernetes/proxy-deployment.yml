@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: octo-proxy-deployment
+  namespace: proxy-ns
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: octo-proxy
+  template:
+    metadata:
+      labels:
+        app: octo-proxy
+    spec:
+      containers:
+        - name: proxy-container
+          image: robert076/octo-proxy:beta
+          ports:
+            - containerPort: 8080
+          env:
+            - name: "INTERNAL_SERVICE_HOST"
+              valueFrom:
+                secretKeyRef:
+                  name: proxy-secret
+                  key: INTERNAL_SERVICE_HOST
