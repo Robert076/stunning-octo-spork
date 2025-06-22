@@ -23,7 +23,8 @@ jobs:
         working-directory: ./internal-service
         run: go get
       - name: Build
-        run: go build -v ./internal-service/main.go
+        working-directory: ./internal-service
+        run: go build -v
 
   lint:
     name: Lint proxy service
