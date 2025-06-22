@@ -19,7 +19,7 @@ func main() {
 	log.Printf("Got env var: %s", internalServiceHost)
 
 	http.HandleFunc("/proxy", handler.ProxyHandler)
-
+	// hello
 	if err := http.ListenAndServe(":8080", nil); err != nil {
 		fmt.Println("Error setting up http server")
 	}
