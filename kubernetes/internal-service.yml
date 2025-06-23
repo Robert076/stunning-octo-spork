@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: octo-internal
-  namespace: proxy-ns
+  namespace: internal-ns
 spec:
   selector:
     app: octo-internal
