@@ -1,6 +1,6 @@
 # 🌐 stunning-octo-spork
 
-Two services deployed to AWS. Cloud infrastructure done with Terraform. Deployed using Kubernetes.
+Two services deployed with Kubernetes. Written in go.
 
 ### 🚀 Run the Kubernetes setup:
 
