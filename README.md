@@ -24,5 +24,3 @@ kubectl port-forward service/proxy-service 8080:5665
 ```
 
 4. Test it with postman (make a get request to `http://localhost:8080/proxy`)
-
-> Documentation will be here when the project is done.
