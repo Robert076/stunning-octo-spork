@@ -1,6 +1,6 @@
 # 🌐 stunning-octo-spork
 
-Two services deployed with Kubernetes. Written in go.
+Two services deployed with Kubernetes. Written in go. There is one endpoint exposed `(proxy)` and you can make a request to it, and it will communicate with the internal service, which you cannot access. If successful, you will see a `200` return code after running the setup. (Do keep in mind that you can also port forward to the other service and just communicate directly with it, but the demo assumes this would be in the cloud and you can only access the `proxy`)
 
 ### 🚀 Run the Kubernetes setup:
 
